@@ -1,0 +1,65 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1a"/>
+      <stop offset="50%" style="stop-color:#0d1320"/>
+      <stop offset="100%" style="stop-color:#0a0f1a"/>
+    </linearGradient>
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="blobGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="blobGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#00D4FF;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative blobs -->
+  <ellipse cx="150" cy="150" rx="200" ry="200" fill="url(#blobGrad1)"/>
+  <ellipse cx="1050" cy="480" rx="250" ry="200" fill="url(#blobGrad2)"/>
+  
+  <!-- Rotating circle decoration -->
+  <circle cx="1000" cy="150" r="80" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="500" r="60" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Signal Bars Logo -->
+  <g transform="translate(540, 180)">
+    <rect x="0" y="60" width="12" height="30" rx="2" fill="#00D4FF" opacity="0.4"/>
+    <rect x="20" y="45" width="12" height="45" rx="2" fill="#00D4FF" opacity="0.55"/>
+    <rect x="40" y="30" width="12" height="60" rx="2" fill="#00D4FF" opacity="0.7"/>
+    <rect x="60" y="15" width="12" height="75" rx="2" fill="#00D4FF" opacity="0.85"/>
+    <rect x="80" y="0" width="12" height="90" rx="2" fill="#00D4FF" opacity="1"/>
+  </g>
+  
+  <!-- SIGNAL Text Logo -->
+  <g transform="translate(260, 320)">
+    <text x="340" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white" text-anchor="middle" letter-spacing="8">SIGNAL</text>
+    <text x="340" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="url(#cyanPurple)" text-anchor="middle" letter-spacing="8" opacity="0.5">SIGNAL</text>
+  </g>
+  
+  <!-- STUDIOS Text -->
+  <g transform="translate(260, 380)">
+    <text x="340" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="16" opacity="0.6">STUDIOS</text>
+  </g>
+  
+  <!-- Tagline -->
+  <text x="600" y="490" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" opacity="0.5" letter-spacing="2">BRAND STRATEGY • WEB DEVELOPMENT • DIGITAL GROWTH</text>
+  
+  <!-- Bottom accent line -->
+  <rect x="450" y="530" width="300" height="2" rx="1" fill="url(#cyanPurple)" opacity="0.6"/>
+</svg>
