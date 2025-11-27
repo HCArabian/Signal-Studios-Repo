@@ -1,0 +1,41 @@
+trunk_cli_version: 1.25.0
+title: Check [[on-demand] [prettier:format:index.html:HEAD]]
+report:
+  - linter:
+      command: |
+        'C:/Users/Christian/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin\sh.exe' 'C:\Users\Christian\AppData\Local\trunk\tools\prettier\3.6.2-5f97d52b5ebf101d73ce0489ebcdf874/node_modules/.bin\prettier' -w index.html
+      stdin_path: (none)
+      run_from: C:\Users\Christian\AppData\Local\Temp\trunk\l3o21xs\yxjcied\
+      timeout: 10m
+      rerun: (cd C:\Users\Christian\AppData\Local\Temp\trunk\l3o21xs\yxjcied\; env -i HOME= 'NODE_PATH=C:\Users\Christian\AppData\Local\trunk\tools\prettier\3.6.2-5f97d52b5ebf101d73ce0489ebcdf874/node_modules' 'COMSPEC=C:\WINDOWS\system32\cmd.exe' 'PATH=C:/Users/Christian/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:/Users/Christian/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Christian\AppData\Local\trunk\tools\prettier\3.6.2-5f97d52b5ebf101d73ce0489ebcdf874/node_modules/.bin;C:\Users\Christian\AppData\Local\trunk\tools\node\22.16.0-12da8a4c27b144aedaf7d975e067667c/bin;C:\Users\Christian\AppData\Local\trunk\tools\node\22.16.0-12da8a4c27b144aedaf7d975e067667c;C:\Users\Christian\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Christian\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Python311\Scripts\;C:\Python311\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python310\Scripts\;C:\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Program Files\Git\cmd;C:\Users\Christian\AppData\Local\Microsoft\WindowsApps;C:\Users\Christian\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Christian\AppData\Local\GitHubDesktop\bin;C:\Users\Christian\AppData\Roaming\npm;c:\Users\Christian\.cache\trunk\launcher' 'C:/Users/Christian/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin\sh.exe' 'C:\Users\Christian\AppData\Local\trunk\tools\prettier\3.6.2-5f97d52b5ebf101d73ce0489ebcdf874/node_modules/.bin\prettier' -w index.html)
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 0
+      stdout: |
+        index.html 157ms
+
+      stderr: (none)
+    parser:
+      command: |
+        'C:\Users\Christian\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070\python3.exe' C:/Users/Christian/AppData/Local/trunk/plugins/https---github-com-trunk-io-plugins/v1.7.4-4ebadccd80b22638/linters/prettier/prettier_to_sarif.py 0
+      stdin_path: (none)
+      run_from: C:\Users\Christian\AppData\Local\Temp\trunk\l3o21xs\yxjcied\
+      timeout: 10m
+      rerun: (cd C:\Users\Christian\AppData\Local\Temp\trunk\l3o21xs\yxjcied\; env -i 'Path=C:\Python311\Scripts\;C:\Python311\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python310\Scripts\;C:\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Program Files\Git\cmd;C:\Users\Christian\AppData\Local\Microsoft\WindowsApps;C:\Users\Christian\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Christian\AppData\Local\GitHubDesktop\bin;C:\Users\Christian\AppData\Roaming\npm;c:\Users\Christian\.cache\trunk\launcher' 'NODE_PATH=C:\Users\Christian\AppData\Local\trunk\tools\prettier\3.6.2-5f97d52b5ebf101d73ce0489ebcdf874/node_modules' 'COMSPEC=C:\WINDOWS\system32\cmd.exe' HOME= 'SYSTEMROOT=C:\WINDOWS' 'PATH=C:\Users\Christian\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Christian\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Christian\AppData\Local\trunk\tools\prettier\3.6.2-5f97d52b5ebf101d73ce0489ebcdf874/bin;C:\Users\Christian\AppData\Local\trunk\tools\prettier\3.6.2-5f97d52b5ebf101d73ce0489ebcdf874/Scripts;C:\Users\Christian\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070/bin;C:\Users\Christian\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070;C:\Users\Christian\AppData\Local\trunk\tools\prettier\3.6.2-5f97d52b5ebf101d73ce0489ebcdf874/node_modules/.bin;C:\Users\Christian\AppData\Local\trunk\tools\node\22.16.0-12da8a4c27b144aedaf7d975e067667c/bin;C:\Users\Christian\AppData\Local\trunk\tools\node\22.16.0-12da8a4c27b144aedaf7d975e067667c;C:\Users\Christian\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Christian\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Python311\Scripts\;C:\Python311\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python310\Scripts\;C:\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Program Files\Git\cmd;C:\Users\Christian\AppData\Local\Microsoft\WindowsApps;C:\Users\Christian\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Christian\AppData\Local\GitHubDesktop\bin;C:\Users\Christian\AppData\Roaming\npm;c:\Users\Christian\.cache\trunk\launcher' PYTHONUTF8=1 'VIRTUAL_ENV=C:\Users\Christian\AppData\Local\trunk\tools\prettier\3.6.2-5f97d52b5ebf101d73ce0489ebcdf874' 'HOMEPATH=\Users\Christian' 'SystemRoot=C:\WINDOWS' 'windir=C:\WINDOWS' 'APPDATA=C:\Users\Christian\AppData\Roaming' 'LOCALAPPDATA=C:\Users\Christian\AppData\Local' 'USERPROFILE=C:\Users\Christian' 'TMP=C:\Users\CHRIST~1\AppData\Local\Temp' 'TEMP=C:\Users\CHRIST~1\AppData\Local\Temp' 'C:\Users\Christian\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070\python3.exe' C:/Users/Christian/AppData/Local/trunk/plugins/https---github-com-trunk-io-plugins/v1.7.4-4ebadccd80b22638/linters/prettier/prettier_to_sarif.py 0)
+      exit_status: exited
+      exit_code: 0
+      stdout: |
+        {
+          "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+          "version": "2.1.0",
+          "runs": [
+            {
+              "results": []
+            }
+          ]
+        }
+
+      stderr: (none)
