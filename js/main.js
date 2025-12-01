@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initSmoothScroll();
     initScrollAnimations();
+    initTypingAnimation();
 });
 
 /* ========================================
@@ -125,6 +126,54 @@ function initScrollAnimations() {
             }
         </style>
     `);
+}
+
+/* ========================================
+   TYPING ANIMATION
+   ======================================== */
+function initTypingAnimation() {
+    const typingElement = document.getElementById('typing-text');
+    if (!typingElement) return;
+
+    const words = ['stand out', 'connect', 'convert', 'grow', 'get noticed', 'inspire'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let isPaused = false;
+
+    function type() {
+        const currentWord = words[wordIndex];
+        
+        if (isPaused) {
+            setTimeout(type, 100);
+            return;
+        }
+
+        if (isDeleting) {
+            typingElement.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingElement.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let typeSpeed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            // Pause at end of word
+            typeSpeed = 2500;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typeSpeed = 400;
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    // Start typing after a short delay
+    setTimeout(type, 1000);
 }
 
 /* ========================================
