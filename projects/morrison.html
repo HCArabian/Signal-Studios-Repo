@@ -3,41 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morrison & Associates | Signal Studios</title>
+    
+    <!-- ============================================
+         PROJECT TEMPLATE - SIGNAL STUDIOS
+         
+         INSTRUCTIONS:
+         1. Duplicate this file and rename it (e.g., client-name.html)
+         2. Search for [PLACEHOLDER] and replace with your content
+         3. Update images in the /projects/images/ folder
+         4. Link from the main page's work section
+         
+         PLACEHOLDERS TO REPLACE:
+         - [PROJECT_NAME] - Client/Project name
+         - [PROJECT_TAGLINE] - Short description for SEO
+         - [INDUSTRY] - Industry category (e.g., LEGAL, TECH, FINANCE)
+         - [SERVICES] - Services provided
+         - [TIMELINE] - Project duration
+         - [YEAR] - Year completed
+         - [WEBSITE_URL] - Client's website (or remove if N/A)
+         - [HERO_IMAGE] - Path to hero image
+         - [CHALLENGE_TEXT] - The problem/challenge
+         - [SOLUTION_TEXT] - Your solution
+         - [RESULT_1-4] - Results/metrics
+         - [TESTIMONIAL] - Client quote
+         - [CLIENT_NAME] - Person who gave testimonial
+         - [CLIENT_ROLE] - Their title
+         - [NEXT_PROJECT_*] - Next project details
+    ============================================ -->
+    
+    <title>[PROJECT_NAME] | Signal Studios</title>
     
     <!-- SEO -->
-    <meta name="description" content="Complete brand transformation for Morrison & Associates - a boutique law firm targeting growth-minded founders.">
+    <meta name="description" content="[PROJECT_TAGLINE]">
+    <meta property="og:title" content="[PROJECT_NAME] | Signal Studios">
+    <meta property="og:description" content="[PROJECT_TAGLINE]">
+    <meta property="og:image" content="/projects/images/[PROJECT_SLUG]-og.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="/css/styles.css">
     <style>
-        /* Project Page Specific Styles */
+        /* ========================================
+           PROJECT PAGE STYLES
+           ======================================== */
+        
+        /* Hero Section */
         .project-hero {
             padding-top: 8rem;
             padding-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
         }
         
+        .project-hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .project-hero-bg .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+        }
+        
+        .project-hero-bg .blob-1 {
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 212, 255, 0.08);
+        }
+        
+        .project-hero-bg .blob-2 {
+            bottom: 20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(0, 212, 255, 0.05);
+        }
+        
+        /* Back Link */
         .back-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            font-family: var(--font-mono);
             font-size: 0.875rem;
             color: var(--white-60);
             margin-bottom: 2rem;
-            transition: color var(--transition-fast);
+            transition: all var(--transition-fast);
+            position: relative;
+            z-index: 1;
         }
         
         .back-link:hover {
             color: var(--cyan);
+            gap: 0.75rem;
         }
         
         .back-link svg {
@@ -45,51 +117,116 @@
             height: 1rem;
         }
         
+        /* Hero Grid */
         .project-hero-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1.5fr 1fr;
             gap: 4rem;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .project-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 1rem 0 1.5rem;
+        }
+        
+        .project-intro {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--white-70);
+            max-width: 600px;
+        }
+        
+        /* Meta Information */
+        .project-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
         
         .project-meta-item {
-            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--white-10);
+        }
+        
+        .project-meta-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
         
         .project-meta-label {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
             color: var(--white-40);
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.5rem;
         }
         
         .project-meta-value {
             color: var(--white);
+            line-height: 1.5;
         }
         
         .project-meta-value a {
             color: var(--cyan);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: gap var(--transition-fast);
         }
         
+        .project-meta-value a:hover {
+            gap: 0.5rem;
+        }
+        
+        /* Hero Image */
         .project-hero-image {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: linear-gradient(135deg, var(--purple), var(--pink));
-            border-radius: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
+            z-index: 1;
             margin-bottom: 4rem;
         }
         
-        .project-hero-image span {
-            font-size: 8rem;
-            font-weight: 700;
-            color: var(--white-10);
+        .project-hero-image img {
+            width: 100%;
+            border-radius: 16px;
+            display: block;
         }
         
+        .project-hero-image-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, var(--navy), #0d1117);
+            border: 1px solid var(--white-10);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .project-hero-image-placeholder svg {
+            width: 64px;
+            height: 64px;
+            color: var(--white-20);
+        }
+        
+        .project-hero-image-placeholder span {
+            color: var(--white-30);
+            font-size: 0.875rem;
+        }
+        
+        /* Content Sections */
         .project-section {
-            padding: 4rem 0;
+            padding: 5rem 0;
+        }
+        
+        .project-section.alt-bg {
+            background: #0d1117;
         }
         
         .project-section-grid {
@@ -98,69 +235,205 @@
             gap: 4rem;
         }
         
+        .project-section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-top: 1rem;
+            line-height: 1.2;
+        }
+        
+        .project-section-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--white-70);
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-section-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Gallery */
         .project-gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            padding: 4rem 0;
+            gap: 1.5rem;
+            padding: 2rem 0;
         }
         
         .project-gallery-item {
-            background: var(--white-05);
-            border-radius: 1rem;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .project-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform var(--transition-slow);
+        }
+        
+        .project-gallery-item:hover img {
+            transform: scale(1.03);
+        }
+        
+        .project-gallery-item-placeholder {
             aspect-ratio: 4/3;
+            background: var(--white-05);
+            border: 1px dashed var(--white-10);
+            border-radius: 12px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: var(--white-40);
+            gap: 0.5rem;
+            color: var(--white-30);
+            font-size: 0.875rem;
         }
         
         .project-gallery-item.full {
             grid-column: span 2;
+        }
+        
+        .project-gallery-item.full .project-gallery-item-placeholder {
             aspect-ratio: 21/9;
         }
         
+        /* Deliverables Grid */
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .deliverable-card {
+            background: var(--white-05);
+            border: 1px solid var(--white-10);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all var(--transition-fast);
+        }
+        
+        .deliverable-card:hover {
+            border-color: var(--cyan);
+            transform: translateY(-4px);
+        }
+        
+        .deliverable-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--cyan), #0891b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .deliverable-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .deliverable-description {
+            color: var(--white-60);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Results Section */
         .results-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
             text-align: center;
-            padding: 4rem 0;
+            padding: 3rem 0;
         }
         
-        .result-item .number {
-            font-size: 4rem;
+        .result-card {
+            padding: 2rem 1rem;
+        }
+        
+        .result-number {
+            font-size: clamp(3rem, 6vw, 4.5rem);
             font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.75rem;
         }
         
-        .result-item .label {
+        .result-number.cyan {
+            background: linear-gradient(135deg, #00D4FF, #0891b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .result-number.purple {
+            background: linear-gradient(135deg, #A855F7, #7C3AED);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .result-number.green {
+            background: linear-gradient(135deg, #22C55E, #16A34A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .result-number.orange {
+            background: linear-gradient(135deg, #F97316, #EA580C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .result-label {
             color: var(--white-60);
-            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
         }
         
+        /* Testimonial */
         .testimonial-section {
             text-align: center;
-            padding: 6rem 0;
-            max-width: 800px;
+            padding: 5rem 0;
+            max-width: 900px;
             margin: 0 auto;
         }
         
+        .testimonial-icon {
+            width: 48px;
+            height: 48px;
+            color: var(--cyan);
+            margin-bottom: 2rem;
+        }
+        
         .testimonial-quote {
-            font-size: 1.75rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
             line-height: 1.6;
             margin-bottom: 2rem;
+            font-weight: 400;
         }
         
         .testimonial-author {
             font-weight: 600;
+            font-size: 1.1rem;
         }
         
         .testimonial-role {
             color: var(--white-60);
+            margin-top: 0.25rem;
         }
         
+        /* Next Project */
         .next-project {
-            padding: 4rem 0;
+            padding: 5rem 0;
             border-top: 1px solid var(--white-10);
         }
         
@@ -171,42 +444,149 @@
             margin-bottom: 2rem;
         }
         
-        .next-project-content {
+        .next-project-link {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+            text-decoration: none;
+            color: inherit;
         }
         
         .next-project-image {
-            background: linear-gradient(135deg, var(--cyan), #3B82F6);
-            border-radius: 1rem;
+            border-radius: 16px;
+            overflow: hidden;
             aspect-ratio: 16/10;
+        }
+        
+        .next-project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        
+        .next-project-link:hover .next-project-image img {
+            transform: scale(1.05);
+        }
+        
+        .next-project-image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--cyan), #3B82F6);
             display: flex;
             align-items: center;
             justify-content: center;
         }
         
-        .next-project-image span {
+        .next-project-image-placeholder span {
             font-size: 4rem;
             font-weight: 700;
             color: var(--white-10);
         }
         
+        .next-project-info h3 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            margin: 1rem 0;
+            transition: color var(--transition-fast);
+        }
+        
+        .next-project-link:hover .next-project-info h3 {
+            color: var(--cyan);
+        }
+        
+        .next-project-info p {
+            color: var(--white-60);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-description {
+            font-size: 1.1rem;
+            color: var(--white-60);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* View All Link */
+        .view-all-link {
+            color: var(--white-60);
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all var(--transition-fast);
+        }
+        
+        .view-all-link:hover {
+            color: var(--cyan);
+            gap: 0.75rem;
+        }
+        
+        /* Responsive */
         @media (max-width: 1024px) {
-            .project-hero-grid,
-            .project-section-grid,
-            .next-project-content {
+            .project-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .project-section-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+            
+            .deliverables-grid {
+                grid-template-columns: 1fr;
             }
             
             .results-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .next-project-link {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
         
         @media (max-width: 768px) {
+            .project-hero {
+                padding-top: 6rem;
+            }
+            
             .project-gallery {
                 grid-template-columns: 1fr;
             }
@@ -215,6 +595,18 @@
                 grid-column: span 1;
             }
             
+            .project-gallery-item.full .project-gallery-item-placeholder {
+                aspect-ratio: 16/9;
+            }
+            
+            .next-project-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
             .results-grid {
                 grid-template-columns: 1fr;
             }
@@ -222,177 +614,250 @@
     </style>
 </head>
 <body>
-
     <!-- Navigation -->
-    <nav id="nav" class="nav scrolled">
+    <nav id="nav" class="nav">
         <div class="nav-container">
             <a href="/" class="nav-logo">
-                <div class="signal-bars">
-                    <span></span><span></span><span></span><span></span><span></span>
+                <div class="logo-lockup">
+                    <div class="signal-bars">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="logo-divider"></div>
+                    <div class="logo-text">
+                        <span class="logo-main">SIGNAL</span>
+                        <span class="logo-sub">STUDIOS</span>
+                    </div>
                 </div>
-                <span class="nav-logo-text">SIGNAL<span class="dim">_</span>STUDIOS</span>
             </a>
             <div class="nav-links">
                 <a href="/#work" class="nav-link">WORK</a>
-                <a href="/#about" class="nav-link">ABOUT</a>
                 <a href="/#services" class="nav-link">SERVICES</a>
-                <a href="/#contact" class="nav-cta">LET'S TALK</a>
+                <a href="/#packages" class="nav-link">PACKAGES</a>
+                <a href="/#about" class="nav-link">ABOUT</a>
+                <a href="/#contact" class="btn btn-primary btn-sm">LET'S TALK</a>
             </div>
             <button class="nav-mobile-btn" id="mobileMenuBtn">MENU</button>
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#work" class="mobile-menu-link">WORK</a>
+        <a href="/#services" class="mobile-menu-link">SERVICES</a>
+        <a href="/#packages" class="mobile-menu-link">PACKAGES</a>
+        <a href="/#about" class="mobile-menu-link">ABOUT</a>
+        <a href="/#contact" class="mobile-menu-link">CONTACT</a>
+    </div>
+
     <!-- Project Hero -->
     <section class="project-hero">
+        <div class="project-hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        
         <div class="container">
             <a href="/#work" class="back-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M15 19l-7-7 7-7"/>
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
-                Back to Projects
+                Back to Work
             </a>
-
+            
             <div class="project-hero-grid">
                 <div>
-                    <span class="section-label">LEGAL SERVICES</span>
-                    <h1 class="section-title" style="margin-top: 1rem;">Morrison & Associates</h1>
-                    <p class="section-description" style="margin-top: 1.5rem; font-size: 1.25rem;">
-                        Complete brand transformation for a boutique law firm targeting growth-minded founders and tech startups. From strategic positioning to digital presence.
+                    <span class="section-label">[INDUSTRY]</span>
+                    <h1 class="project-title">[PROJECT_NAME]</h1>
+                    <p class="project-intro">
+                        [PROJECT_TAGLINE] — A brief 1-2 sentence description of the project scope and goals.
                     </p>
                 </div>
-                <div>
+                <div class="project-meta">
                     <div class="project-meta-item">
                         <div class="project-meta-label">SERVICES</div>
-                        <div class="project-meta-value">Brand Strategy, Visual Identity, Web Design, Content Strategy</div>
+                        <div class="project-meta-value">[SERVICES]</div>
                     </div>
                     <div class="project-meta-item">
                         <div class="project-meta-label">TIMELINE</div>
-                        <div class="project-meta-value">8 weeks</div>
+                        <div class="project-meta-value">[TIMELINE]</div>
                     </div>
                     <div class="project-meta-item">
                         <div class="project-meta-label">YEAR</div>
-                        <div class="project-meta-value">2024</div>
+                        <div class="project-meta-value">[YEAR]</div>
                     </div>
                     <div class="project-meta-item">
                         <div class="project-meta-label">WEBSITE</div>
-                        <div class="project-meta-value"><a href="#">morrisonlaw.com →</a></div>
+                        <div class="project-meta-value">
+                            <a href="[WEBSITE_URL]" target="_blank" rel="noopener">
+                                Visit Website
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Hero Image -->
             <div class="project-hero-image">
-                <span>M&A</span>
+                <!-- Replace with actual image:
+                <img src="/projects/images/[PROJECT_SLUG]-hero.jpg" alt="[PROJECT_NAME] project hero image">
+                -->
+                <div class="project-hero-image-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                    <span>Hero Image (1920×1080 recommended)</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Challenge -->
+    <!-- Challenge Section -->
     <section class="project-section">
         <div class="container">
             <div class="project-section-grid">
                 <div>
                     <span class="section-label">THE CHALLENGE</span>
-                    <h2 class="section-title" style="font-size: 2.5rem; margin-top: 1rem;">Repositioning for Growth</h2>
+                    <h2 class="project-section-title">Challenge Title Here</h2>
                 </div>
-                <div>
-                    <p class="about-text">
-                        Morrison & Associates had built a strong reputation serving established corporations, but the partners saw an opportunity to pivot toward the tech startup ecosystem. Their existing brand felt corporate and dated—misaligned with the founders they wanted to attract.
+                <div class="project-section-content">
+                    <p>
+                        [CHALLENGE_TEXT_PARAGRAPH_1] — Describe the client's situation before working with you. What problems were they facing? What opportunities were they missing?
                     </p>
-                    <p class="about-text">
-                        They needed a complete transformation: new positioning that spoke to startup founders, a modern visual identity that stood out from traditional law firm aesthetics, and a digital presence that could compete with the best in tech.
+                    <p>
+                        [CHALLENGE_TEXT_PARAGRAPH_2] — Add more context about specific pain points, business goals, or market conditions that made this project necessary.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery -->
+    <!-- Gallery: Discovery -->
     <section class="container">
         <div class="project-gallery">
-            <div class="project-gallery-item">Brand Strategy Workshop</div>
-            <div class="project-gallery-item">Competitive Analysis</div>
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-discovery-1.jpg" alt="Discovery process"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Discovery Image 1</span>
+                </div>
+            </div>
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-discovery-2.jpg" alt="Research insights"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Discovery Image 2</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Solution -->
+    <!-- Solution Section -->
     <section class="project-section">
         <div class="container">
             <div class="project-section-grid">
                 <div>
                     <span class="section-label">THE SOLUTION</span>
-                    <h2 class="section-title" style="font-size: 2.5rem; margin-top: 1rem;">Strategic Repositioning</h2>
+                    <h2 class="project-section-title">Solution Title Here</h2>
                 </div>
-                <div>
-                    <p class="about-text">
-                        We developed a new brand platform centered on the concept of "Legal Partners for Builders"—positioning Morrison as the law firm that truly understands the startup journey because they're entrepreneurs themselves.
+                <div class="project-section-content">
+                    <p>
+                        [SOLUTION_TEXT_PARAGRAPH_1] — Describe your strategic approach. What insights led to your solution? How did you address the core challenges?
                     </p>
-                    <p class="about-text">
-                        The visual identity moved away from traditional law firm clichés toward a clean, modern aesthetic that feels at home in the tech ecosystem while maintaining credibility and trust.
+                    <p>
+                        [SOLUTION_TEXT_PARAGRAPH_2] — Explain the creative direction, key decisions, and how everything came together.
                     </p>
                 </div>
             </div>
 
             <!-- Deliverables -->
-            <div class="services-grid" style="margin-top: 4rem;">
-                <div class="service-card">
-                    <span class="service-number">01</span>
-                    <h3 class="service-title">Brand Strategy</h3>
-                    <p class="service-description">New positioning, messaging framework, and brand voice guidelines targeting startup founders.</p>
+            <div class="deliverables-grid">
+                <div class="deliverable-card">
+                    <span class="deliverable-number">01</span>
+                    <h3 class="deliverable-title">[DELIVERABLE_1_TITLE]</h3>
+                    <p class="deliverable-description">[DELIVERABLE_1_DESCRIPTION]</p>
                 </div>
-                <div class="service-card">
-                    <span class="service-number">02</span>
-                    <h3 class="service-title">Visual Identity</h3>
-                    <p class="service-description">Modern logo, color palette, typography, and comprehensive brand guidelines.</p>
+                <div class="deliverable-card">
+                    <span class="deliverable-number">02</span>
+                    <h3 class="deliverable-title">[DELIVERABLE_2_TITLE]</h3>
+                    <p class="deliverable-description">[DELIVERABLE_2_DESCRIPTION]</p>
                 </div>
-                <div class="service-card">
-                    <span class="service-number">03</span>
-                    <h3 class="service-title">Website</h3>
-                    <p class="service-description">Conversion-optimized website with integrated booking, resource center, and blog.</p>
+                <div class="deliverable-card">
+                    <span class="deliverable-number">03</span>
+                    <h3 class="deliverable-title">[DELIVERABLE_3_TITLE]</h3>
+                    <p class="deliverable-description">[DELIVERABLE_3_DESCRIPTION]</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Full Width Image -->
+    <!-- Full Width Gallery -->
     <section class="container">
         <div class="project-gallery">
-            <div class="project-gallery-item full">Full Website Mockup</div>
+            <div class="project-gallery-item full">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-showcase.jpg" alt="Full project showcase"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Full Width Showcase Image (1920×820 recommended)</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- More Images -->
+    <!-- More Gallery -->
     <section class="container">
         <div class="project-gallery">
-            <div class="project-gallery-item">Logo Design</div>
-            <div class="project-gallery-item">Color Palette</div>
-            <div class="project-gallery-item">Business Cards</div>
-            <div class="project-gallery-item">Stationery</div>
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-detail-1.jpg" alt="Detail shot 1"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Detail Image 1</span>
+                </div>
+            </div>
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-detail-2.jpg" alt="Detail shot 2"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Detail Image 2</span>
+                </div>
+            </div>
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-detail-3.jpg" alt="Detail shot 3"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Detail Image 3</span>
+                </div>
+            </div>
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-detail-4.jpg" alt="Detail shot 4"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Detail Image 4</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Results -->
-    <section class="project-section" style="background: var(--white-05);">
+    <!-- Results Section -->
+    <section class="project-section alt-bg">
         <div class="container">
-            <div class="section-header centered">
+            <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
                 <span class="section-label">THE RESULTS</span>
-                <h2 class="section-title">Measurable Impact</h2>
+                <h2 class="project-section-title" style="margin-top: 1rem;">Measurable Impact</h2>
             </div>
             <div class="results-grid">
-                <div class="result-item">
-                    <div class="number gradient-cyan">312%</div>
-                    <div class="label">Increase in qualified leads</div>
+                <div class="result-card">
+                    <div class="result-number cyan">[RESULT_1_NUMBER]</div>
+                    <div class="result-label">[RESULT_1_LABEL]</div>
                 </div>
-                <div class="result-item">
-                    <div class="number gradient-purple">4.2x</div>
-                    <div class="label">Website traffic growth</div>
+                <div class="result-card">
+                    <div class="result-number purple">[RESULT_2_NUMBER]</div>
+                    <div class="result-label">[RESULT_2_LABEL]</div>
                 </div>
-                <div class="result-item">
-                    <div class="number gradient-lime">67%</div>
-                    <div class="label">Reduction in sales cycle</div>
+                <div class="result-card">
+                    <div class="result-number green">[RESULT_3_NUMBER]</div>
+                    <div class="result-label">[RESULT_3_LABEL]</div>
                 </div>
-                <div class="result-item">
-                    <div class="number gradient-cyan">28</div>
-                    <div class="label">New startup clients</div>
+                <div class="result-card">
+                    <div class="result-number orange">[RESULT_4_NUMBER]</div>
+                    <div class="result-label">[RESULT_4_LABEL]</div>
                 </div>
             </div>
         </div>
@@ -401,14 +866,14 @@
     <!-- Testimonial -->
     <section class="container">
         <div class="testimonial-section">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="var(--cyan)">
+            <svg class="testimonial-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
             </svg>
-            <blockquote class="testimonial-quote" style="margin-top: 2rem;">
-                "Signal Studios completely transformed how we present ourselves to the market. The new brand has opened doors we never thought possible. Founders now see us as partners, not just lawyers."
+            <blockquote class="testimonial-quote">
+                "[TESTIMONIAL]"
             </blockquote>
-            <div class="testimonial-author">Sarah Morrison</div>
-            <div class="testimonial-role">Managing Partner, Morrison & Associates</div>
+            <div class="testimonial-author">[CLIENT_NAME]</div>
+            <div class="testimonial-role">[CLIENT_ROLE], [PROJECT_NAME]</div>
         </div>
     </section>
 
@@ -416,48 +881,114 @@
     <section class="next-project">
         <div class="container">
             <div class="next-project-header">
-                <span class="section-label" style="margin-bottom: 0;">NEXT PROJECT</span>
-                <a href="/#work" class="nav-link">View All Projects →</a>
+                <span class="section-label">NEXT PROJECT</span>
+                <a href="/#work" class="view-all-link">
+                    View All Projects
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
             </div>
-            <a href="/projects/apex.html" class="next-project-content" style="text-decoration: none;">
+            <a href="/projects/[NEXT_PROJECT_SLUG].html" class="next-project-link">
                 <div class="next-project-image">
-                    <span>ACG</span>
+                    <!-- <img src="/projects/images/[NEXT_PROJECT_SLUG]-thumb.jpg" alt="[NEXT_PROJECT_NAME]"> -->
+                    <div class="next-project-image-placeholder">
+                        <span>[NEXT_PROJECT_INITIALS]</span>
+                    </div>
                 </div>
-                <div>
-                    <span class="project-category">CONSULTING</span>
-                    <h3 style="font-size: 2.5rem; margin: 1rem 0;">Apex Consulting Group</h3>
-                    <p class="section-description">High-conversion website and lead generation system for management consultants.</p>
+                <div class="next-project-info">
+                    <span class="section-label">[NEXT_PROJECT_INDUSTRY]</span>
+                    <h3>[NEXT_PROJECT_NAME]</h3>
+                    <p>[NEXT_PROJECT_DESCRIPTION]</p>
                 </div>
             </a>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section" style="text-align: center;">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <h2 class="section-title">Ready to transform your brand?</h2>
-            <p class="section-description" style="margin: 1.5rem auto 2rem;">Let's discuss how we can help your business connect with the right audience.</p>
+            <h2 class="cta-title">Ready to transform your brand?</h2>
+            <p class="cta-description">Let's discuss how we can help your business connect with the right audience.</p>
             <a href="/#contact" class="btn btn-primary">START A PROJECT</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#0d1117"/>
+            </svg>
+        </div>
+        
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <div class="signal-bars">
-                        <span></span><span></span><span></span><span></span><span></span>
+            <div class="footer-main">
+                <!-- Logo & Tagline -->
+                <div class="footer-brand">
+                    <div class="logo-lockup">
+                        <div class="signal-bars">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="logo-divider"></div>
+                        <div class="logo-text">
+                            <span class="logo-main">SIGNAL</span>
+                            <span class="logo-sub">STUDIOS</span>
+                        </div>
                     </div>
-                    <span>SIGNAL_STUDIOS</span>
+                    <p class="footer-tagline">We help brands find their voice and be heard. Strategy, design, and development for ambitious businesses.</p>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/company/signalstudios" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/signalstudios" target="_blank" rel="noopener" aria-label="Twitter/X">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/signalstudios" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <a href="/#work">WORK</a>
-                    <a href="/#about">ABOUT</a>
-                    <a href="/#services">SERVICES</a>
-                    <a href="/#contact">CONTACT</a>
+
+                <!-- Navigation -->
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h4>Navigation</h4>
+                        <a href="/#work">Work</a>
+                        <a href="/#services">Services</a>
+                        <a href="/#packages">Packages</a>
+                        <a href="/#about">About</a>
+                        <a href="/#contact">Contact</a>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h4>Services</h4>
+                        <a href="/#services">Brand Strategy</a>
+                        <a href="/#services">Visual Identity</a>
+                        <a href="/#services">Web Development</a>
+                        <a href="/#services">Digital Growth</a>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h4>Contact</h4>
+                        <a href="mailto:hello@signalstudios.com">hello@signalstudios.com</a>
+                        <a href="tel:+1234567890">(123) 456-7890</a>
+                        <span class="footer-location">Los Angeles, CA</span>
+                    </div>
                 </div>
-                <p class="footer-copyright">© 2025 SIGNAL STUDIOS</p>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Signal Studios. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
