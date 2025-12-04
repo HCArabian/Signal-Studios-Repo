@@ -4,92 +4,621 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Primary Meta Tags -->
-    <title>Signal Studios | Brand Strategy, Web Development & Digital Growth</title>
-    <meta name="title" content="Signal Studios | Brand Strategy, Web Development & Digital Growth">
-    <meta name="description" content="Full-service creative agency helping ambitious businesses stand out. Brand strategy, visual identity, custom web development, and digital growth solutions. Los Angeles based, working worldwide.">
-    <meta name="keywords" content="creative agency, brand strategy, web development, digital marketing, visual identity, professional services branding, law firm branding, consulting firm branding, Los Angeles creative agency, website design">
-    <meta name="author" content="Signal Studios">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.studiosignal.io/">
+    <!-- ============================================
+         PROJECT TEMPLATE - SIGNAL STUDIOS
+         
+         INSTRUCTIONS:
+         1. Duplicate this file and rename it (e.g., client-name.html)
+         2. Search for [PLACEHOLDER] and replace with your content
+         3. Update images in the /projects/images/ folder
+         4. Link from the main page's work section
+         
+         PLACEHOLDERS TO REPLACE:
+         - [PROJECT_NAME] - Client/Project name
+         - [PROJECT_TAGLINE] - Short description for SEO
+         - [INDUSTRY] - Industry category (e.g., LEGAL, TECH, FINANCE)
+         - [SERVICES] - Services provided
+         - [TIMELINE] - Project duration
+         - [YEAR] - Year completed
+         - [WEBSITE_URL] - Client's website (or remove if N/A)
+         - [HERO_IMAGE] - Path to hero image
+         - [CHALLENGE_TEXT] - The problem/challenge
+         - [SOLUTION_TEXT] - Your solution
+         - [RESULT_1-4] - Results/metrics
+         - [TESTIMONIAL] - Client quote
+         - [CLIENT_NAME] - Person who gave testimonial
+         - [CLIENT_ROLE] - Their title
+         - [NEXT_PROJECT_*] - Next project details
+    ============================================ -->
     
-    <!-- Open Graph / Facebook -->
+    <title>[PROJECT_NAME] | Signal Studios</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="[PROJECT_TAGLINE]">
+    <meta property="og:title" content="[PROJECT_NAME] | Signal Studios">
+    <meta property="og:description" content="[PROJECT_TAGLINE]">
+    <meta property="og:image" content="/projects/images/[PROJECT_SLUG]-og.png">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.studiosignal.io/">
-    <meta property="og:site_name" content="Signal Studios">
-    <meta property="og:title" content="Signal Studios | Brand Strategy, Web Development & Digital Growth">
-    <meta property="og:description" content="Full-service creative agency helping ambitious businesses stand out. Brand strategy, visual identity, custom web development, and digital growth solutions.">
-    <meta property="og:image" content="https://www.studiosignal.io/images/og-image.svg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Signal Studios - Brand Strategy, Web Development & Digital Growth">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@signalstudios">
-    <meta name="twitter:creator" content="@signalstudios">
-    <meta name="twitter:url" content="https://www.studiosignal.io/">
-    <meta name="twitter:title" content="Signal Studios | Brand Strategy, Web Development & Digital Growth">
-    <meta name="twitter:description" content="Full-service creative agency helping ambitious businesses stand out. Brand strategy, visual identity, custom web development, and digital growth solutions.">
-    <meta name="twitter:image" content="https://www.studiosignal.io/images/og-image.png">
-    <meta name="twitter:image:alt" content="Signal Studios - Brand Strategy, Web Development & Digital Growth">
-    
-    <!-- Additional SEO -->
-    <meta name="theme-color" content="#1A2332">
-    <meta name="msapplication-TileColor" content="#1A2332">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     
-    <!-- Fonts - Inter (Brand Primary) + Georgia (Warmth) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="/css/styles.css">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Signal Studios",
-        "description": "Full-service creative agency specializing in brand strategy, web development, and digital growth for ambitious businesses.",
-        "url": "https://www.studiosignal.io",
-        "logo": "https://www.studiosignal.io/images/og-image.png",
-        "image": "https://www.studiosignal.io/images/og-image.png",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Los Angeles",
-            "addressRegion": "CA",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "34.0522",
-            "longitude": "-118.2437"
-        },
-        "priceRange": "$$$",
-        "serviceType": ["Brand Strategy", "Web Development", "Visual Identity", "Digital Marketing"],
-        "areaServed": "Worldwide",
-        "sameAs": [
-            "https://instagram.com/studiosignal.io"
-        ]
-    }
-    </script>
+    <style>
+        /* ========================================
+           PROJECT PAGE STYLES
+           ======================================== */
+        
+        /* Hero Section */
+        .project-hero {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .project-hero-bg .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+        }
+        
+        .project-hero-bg .blob-1 {
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 212, 255, 0.08);
+        }
+        
+        .project-hero-bg .blob-2 {
+            bottom: 20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(0, 212, 255, 0.05);
+        }
+        
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--white-60);
+            margin-bottom: 2rem;
+            transition: all var(--transition-fast);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .back-link:hover {
+            color: var(--cyan);
+            gap: 0.75rem;
+        }
+        
+        .back-link svg {
+            width: 1rem;
+            height: 1rem;
+        }
+        
+        /* Hero Grid */
+        .project-hero-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .project-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 1rem 0 1.5rem;
+        }
+        
+        .project-intro {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--white-70);
+            max-width: 600px;
+        }
+        
+        /* Meta Information */
+        .project-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .project-meta-item {
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--white-10);
+        }
+        
+        .project-meta-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .project-meta-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--white-40);
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-meta-value {
+            color: var(--white);
+            line-height: 1.5;
+        }
+        
+        .project-meta-value a {
+            color: var(--cyan);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: gap var(--transition-fast);
+        }
+        
+        .project-meta-value a:hover {
+            gap: 0.5rem;
+        }
+        
+        /* Hero Image */
+        .project-hero-image {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 4rem;
+        }
+        
+        .project-hero-image img {
+            width: 100%;
+            border-radius: 16px;
+            display: block;
+        }
+        
+        .project-hero-image-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, var(--navy), #0d1117);
+            border: 1px solid var(--white-10);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .project-hero-image-placeholder svg {
+            width: 64px;
+            height: 64px;
+            color: var(--white-20);
+        }
+        
+        .project-hero-image-placeholder span {
+            color: var(--white-30);
+            font-size: 0.875rem;
+        }
+        
+        /* Content Sections */
+        .project-section {
+            padding: 5rem 0;
+        }
+        
+        .project-section.alt-bg {
+            background: #0d1117;
+        }
+        
+        .project-section-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+        }
+        
+        .project-section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-top: 1rem;
+            line-height: 1.2;
+        }
+        
+        .project-section-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--white-70);
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-section-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Gallery */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+        
+        .project-gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .project-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform var(--transition-slow);
+        }
+        
+        .project-gallery-item:hover img {
+            transform: scale(1.03);
+        }
+        
+        .project-gallery-item-placeholder {
+            aspect-ratio: 4/3;
+            background: var(--white-05);
+            border: 1px dashed var(--white-10);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--white-30);
+            font-size: 0.875rem;
+        }
+        
+        .project-gallery-item.full {
+            grid-column: span 2;
+        }
+        
+        .project-gallery-item.full .project-gallery-item-placeholder {
+            aspect-ratio: 21/9;
+        }
+        
+        /* Deliverables Grid */
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .deliverable-card {
+            background: var(--white-05);
+            border: 1px solid var(--white-10);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all var(--transition-fast);
+        }
+        
+        .deliverable-card:hover {
+            border-color: var(--cyan);
+            transform: translateY(-4px);
+        }
+        
+        .deliverable-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--cyan), #0891b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .deliverable-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .deliverable-description {
+            color: var(--white-60);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Results Section */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .result-card {
+            padding: 2rem 1rem;
+        }
+        
+        .result-number {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+        
+        .result-number.cyan {
+            background: linear-gradient(135deg, #00D4FF, #0891b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .result-number.purple {
+            background: linear-gradient(135deg, #A855F7, #7C3AED);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .result-number.green {
+            background: linear-gradient(135deg, #22C55E, #16A34A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .result-number.orange {
+            background: linear-gradient(135deg, #F97316, #EA580C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .result-label {
+            color: var(--white-60);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        /* Testimonial */
+        .testimonial-section {
+            text-align: center;
+            padding: 5rem 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-icon {
+            width: 48px;
+            height: 48px;
+            color: var(--cyan);
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-quote {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-role {
+            color: var(--white-60);
+            margin-top: 0.25rem;
+        }
+        
+        /* Next Project */
+        .next-project {
+            padding: 5rem 0;
+            border-top: 1px solid var(--white-10);
+        }
+        
+        .next-project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .next-project-link {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .next-project-image {
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+        }
+        
+        .next-project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        
+        .next-project-link:hover .next-project-image img {
+            transform: scale(1.05);
+        }
+        
+        .next-project-image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--cyan), #3B82F6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .next-project-image-placeholder span {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--white-10);
+        }
+        
+        .next-project-info h3 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            margin: 1rem 0;
+            transition: color var(--transition-fast);
+        }
+        
+        .next-project-link:hover .next-project-info h3 {
+            color: var(--cyan);
+        }
+        
+        .next-project-info p {
+            color: var(--white-60);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-description {
+            font-size: 1.1rem;
+            color: var(--white-60);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* View All Link */
+        .view-all-link {
+            color: var(--white-60);
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all var(--transition-fast);
+        }
+        
+        .view-all-link:hover {
+            color: var(--cyan);
+            gap: 0.75rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .project-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .project-section-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .deliverables-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .next-project-link {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero {
+                padding-top: 6rem;
+            }
+            
+            .project-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-gallery-item.full {
+                grid-column: span 1;
+            }
+            
+            .project-gallery-item.full .project-gallery-item-placeholder {
+                aspect-ratio: 16/9;
+            }
+            
+            .next-project-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-
     <!-- Navigation -->
     <nav id="nav" class="nav">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <div class="logo-lockup animated">
+            <a href="/" class="nav-logo">
+                <div class="logo-lockup">
                     <div class="signal-bars">
                         <span></span><span></span><span></span><span></span><span></span>
                     </div>
@@ -101,11 +630,11 @@
                 </div>
             </a>
             <div class="nav-links">
-                <a href="#work" class="nav-link">WORK</a>
-                <a href="#services" class="nav-link">SERVICES</a>
-                <a href="#packages" class="nav-link">PACKAGES</a>
-                <a href="#about" class="nav-link">ABOUT</a>
-                <a href="#contact" class="nav-cta">START A PROJECT</a>
+                <a href="/#work" class="nav-link">WORK</a>
+                <a href="/#services" class="nav-link">SERVICES</a>
+                <a href="/#packages" class="nav-link">PACKAGES</a>
+                <a href="/#about" class="nav-link">ABOUT</a>
+                <a href="/#contact" class="btn btn-primary btn-sm">LET'S TALK</a>
             </div>
             <button class="nav-mobile-btn" id="mobileMenuBtn">MENU</button>
         </div>
@@ -113,549 +642,275 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-content">
-            <a href="#work" class="mobile-menu-link">WORK</a>
-            <a href="#services" class="mobile-menu-link">SERVICES</a>
-            <a href="#packages" class="mobile-menu-link">PACKAGES</a>
-            <a href="#about" class="mobile-menu-link">ABOUT</a>
-            <a href="#contact" class="mobile-menu-link">CONTACT</a>
-        </div>
+        <a href="/#work" class="mobile-menu-link">WORK</a>
+        <a href="/#services" class="mobile-menu-link">SERVICES</a>
+        <a href="/#packages" class="mobile-menu-link">PACKAGES</a>
+        <a href="/#about" class="mobile-menu-link">ABOUT</a>
+        <a href="/#contact" class="mobile-menu-link">CONTACT</a>
     </div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-bg">
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="project-hero-bg">
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
-            
-            <!-- Signal Pulse Animation -->
-            <div class="signal-pulse">
-                <div class="pulse-ring"></div>
-                <div class="pulse-ring"></div>
-                <div class="pulse-ring"></div>
-                <div class="pulse-ring"></div>
-                <div class="signal-core"></div>
-            </div>
-            
-            <!-- Wave Animation -->
-            <div class="wave-container">
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-            </div>
         </div>
-
-        <div class="hero-content">
-            <div class="hero-logo fade-up">
-                <div class="logo-lockup animated large">
-                    <div class="signal-bars">
-                        <span></span><span></span><span></span><span></span><span></span>
+        
+        <div class="container">
+            <a href="/#work" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Work
+            </a>
+            
+            <div class="project-hero-grid">
+                <div>
+                    <span class="section-label">[INDUSTRY]</span>
+                    <h1 class="project-title">[PROJECT_NAME]</h1>
+                    <p class="project-intro">
+                        [PROJECT_TAGLINE] — A brief 1-2 sentence description of the project scope and goals.
+                    </p>
+                </div>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <div class="project-meta-label">SERVICES</div>
+                        <div class="project-meta-value">[SERVICES]</div>
                     </div>
-                    <div class="logo-divider"></div>
-                    <div class="logo-text">
-                        <span class="logo-main">SIGNAL</span>
-                        <span class="logo-sub">STUDIOS</span>
+                    <div class="project-meta-item">
+                        <div class="project-meta-label">TIMELINE</div>
+                        <div class="project-meta-value">[TIMELINE]</div>
+                    </div>
+                    <div class="project-meta-item">
+                        <div class="project-meta-label">YEAR</div>
+                        <div class="project-meta-value">[YEAR]</div>
+                    </div>
+                    <div class="project-meta-item">
+                        <div class="project-meta-label">WEBSITE</div>
+                        <div class="project-meta-value">
+                            <a href="[WEBSITE_URL]" target="_blank" rel="noopener">
+                                Visit Website
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <p class="hero-tagline fade-up delay-1">We build brands that</p>
-            
-            <h1 class="hero-headline fade-up delay-1">
-                <span class="typing-text" id="typing-text">stand out</span><span class="typing-cursor">|</span>
-            </h1>
+            <!-- Hero Image -->
+            <div class="project-hero-image">
+                <!-- Replace with actual image:
+                <img src="/projects/images/[PROJECT_SLUG]-hero.jpg" alt="[PROJECT_NAME] project hero image">
+                -->
+                <div class="project-hero-image-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                    <span>Hero Image (1920×1080 recommended)</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <p class="hero-subheadline fade-up delay-2">
-                Hi, I'm Chris—founder of Signal Studios. We're a small team that partners with ambitious businesses to build brands that actually connect with people. No jargon, no fluff—just thoughtful strategy and beautiful execution.
-            </p>
+    <!-- Challenge Section -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-section-grid">
+                <div>
+                    <span class="section-label">THE CHALLENGE</span>
+                    <h2 class="project-section-title">Challenge Title Here</h2>
+                </div>
+                <div class="project-section-content">
+                    <p>
+                        [CHALLENGE_TEXT_PARAGRAPH_1] — Describe the client's situation before working with you. What problems were they facing? What opportunities were they missing?
+                    </p>
+                    <p>
+                        [CHALLENGE_TEXT_PARAGRAPH_2] — Add more context about specific pain points, business goals, or market conditions that made this project necessary.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="hero-ctas fade-up delay-3">
-                <a href="#work" class="btn btn-primary">
-                    <span>SEE OUR WORK</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+    <!-- Gallery: Discovery -->
+    <section class="container">
+        <div class="project-gallery">
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-discovery-1.jpg" alt="Discovery process"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Discovery Image 1</span>
+                </div>
+            </div>
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-discovery-2.jpg" alt="Research insights"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Discovery Image 2</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-section-grid">
+                <div>
+                    <span class="section-label">THE SOLUTION</span>
+                    <h2 class="project-section-title">Solution Title Here</h2>
+                </div>
+                <div class="project-section-content">
+                    <p>
+                        [SOLUTION_TEXT_PARAGRAPH_1] — Describe your strategic approach. What insights led to your solution? How did you address the core challenges?
+                    </p>
+                    <p>
+                        [SOLUTION_TEXT_PARAGRAPH_2] — Explain the creative direction, key decisions, and how everything came together.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Deliverables -->
+            <div class="deliverables-grid">
+                <div class="deliverable-card">
+                    <span class="deliverable-number">01</span>
+                    <h3 class="deliverable-title">[DELIVERABLE_1_TITLE]</h3>
+                    <p class="deliverable-description">[DELIVERABLE_1_DESCRIPTION]</p>
+                </div>
+                <div class="deliverable-card">
+                    <span class="deliverable-number">02</span>
+                    <h3 class="deliverable-title">[DELIVERABLE_2_TITLE]</h3>
+                    <p class="deliverable-description">[DELIVERABLE_2_DESCRIPTION]</p>
+                </div>
+                <div class="deliverable-card">
+                    <span class="deliverable-number">03</span>
+                    <h3 class="deliverable-title">[DELIVERABLE_3_TITLE]</h3>
+                    <p class="deliverable-description">[DELIVERABLE_3_DESCRIPTION]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Gallery -->
+    <section class="container">
+        <div class="project-gallery">
+            <div class="project-gallery-item full">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-showcase.jpg" alt="Full project showcase"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Full Width Showcase Image (1920×820 recommended)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Gallery -->
+    <section class="container">
+        <div class="project-gallery">
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-detail-1.jpg" alt="Detail shot 1"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Detail Image 1</span>
+                </div>
+            </div>
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-detail-2.jpg" alt="Detail shot 2"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Detail Image 2</span>
+                </div>
+            </div>
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-detail-3.jpg" alt="Detail shot 3"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Detail Image 3</span>
+                </div>
+            </div>
+            <div class="project-gallery-item">
+                <!-- <img src="/projects/images/[PROJECT_SLUG]-detail-4.jpg" alt="Detail shot 4"> -->
+                <div class="project-gallery-item-placeholder">
+                    <span>Detail Image 4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="project-section alt-bg">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+                <span class="section-label">THE RESULTS</span>
+                <h2 class="project-section-title" style="margin-top: 1rem;">Measurable Impact</h2>
+            </div>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number cyan">[RESULT_1_NUMBER]</div>
+                    <div class="result-label">[RESULT_1_LABEL]</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number purple">[RESULT_2_NUMBER]</div>
+                    <div class="result-label">[RESULT_2_LABEL]</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number green">[RESULT_3_NUMBER]</div>
+                    <div class="result-label">[RESULT_3_LABEL]</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number orange">[RESULT_4_NUMBER]</div>
+                    <div class="result-label">[RESULT_4_LABEL]</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="container">
+        <div class="testimonial-section">
+            <svg class="testimonial-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <blockquote class="testimonial-quote">
+                "[TESTIMONIAL]"
+            </blockquote>
+            <div class="testimonial-author">[CLIENT_NAME]</div>
+            <div class="testimonial-role">[CLIENT_ROLE], [PROJECT_NAME]</div>
+        </div>
+    </section>
+
+    <!-- Next Project -->
+    <section class="next-project">
+        <div class="container">
+            <div class="next-project-header">
+                <span class="section-label">NEXT PROJECT</span>
+                <a href="/#work" class="view-all-link">
+                    View All Projects
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="#contact" class="btn btn-secondary">LET'S TALK</a>
             </div>
-        </div>
-
-        <div class="scroll-indicator">
-            <span>SCROLL</span>
-            <div class="scroll-line"><div class="scroll-dot"></div></div>
+            <a href="/projects/[NEXT_PROJECT_SLUG].html" class="next-project-link">
+                <div class="next-project-image">
+                    <!-- <img src="/projects/images/[NEXT_PROJECT_SLUG]-thumb.jpg" alt="[NEXT_PROJECT_NAME]"> -->
+                    <div class="next-project-image-placeholder">
+                        <span>[NEXT_PROJECT_INITIALS]</span>
+                    </div>
+                </div>
+                <div class="next-project-info">
+                    <span class="section-label">[NEXT_PROJECT_INDUSTRY]</span>
+                    <h3>[NEXT_PROJECT_NAME]</h3>
+                    <p>[NEXT_PROJECT_DESCRIPTION]</p>
+                </div>
+            </a>
         </div>
     </section>
 
-    <!-- Marquee -->
-    <section class="marquee-section">
-        <div class="marquee">
-            <div class="marquee-content">
-                <span>BRAND STRATEGY</span>
-                <span class="star gradient-cyan">✦</span>
-                <span>WEB DEVELOPMENT</span>
-                <span class="star gradient-cyan">✦</span>
-                <span>VISUAL IDENTITY</span>
-                <span class="star gradient-cyan">✦</span>
-                <span>DIGITAL GROWTH</span>
-                <span class="star gradient-cyan">✦</span>
-                <span>BRAND STRATEGY</span>
-                <span class="star gradient-cyan">✦</span>
-                <span>WEB DEVELOPMENT</span>
-                <span class="star gradient-cyan">✦</span>
-                <span>VISUAL IDENTITY</span>
-                <span class="star gradient-cyan">✦</span>
-                <span>DIGITAL GROWTH</span>
-                <span class="star gradient-cyan">✦</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Section -->
-    <section id="work" class="section work-section">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <div class="section-header">
-                <div class="section-header-left">
-                    <span class="section-label">[ 001 ] OUR WORK</span>
-                    <h2 class="section-title">
-                        PROJECTS THAT<br>
-                        <span class="gradient-cyan">TELL A STORY</span>
-                    </h2>
-                </div>
-                <p class="section-description">
-                    Every project is a partnership. Here's a look at some of the businesses we've helped grow, rebrand, and launch.
-                </p>
-            </div>
-
-            <div class="projects-list">
-                <!-- Project 1 -->
-                <a href="/projects/morrison.html" class="project-row">
-                    <div class="project-row-number">01</div>
-                    <div class="project-row-content">
-                        <div class="project-row-header">
-                            <h3 class="project-row-title">Morrison & Associates</h3>
-                            <span class="project-row-industry">Legal / Professional Services</span>
-                        </div>
-                        <p class="project-row-description">
-                            Complete brand transformation for a boutique law firm looking to attract growth-minded tech founders. We developed their positioning, created a sophisticated visual identity, and built a website that converts visitors into consultations.
-                        </p>
-                        <div class="project-row-services">
-                            <span>Brand Strategy</span>
-                            <span>Visual Identity</span>
-                            <span>Web Development</span>
-                            <span>Content Strategy</span>
-                        </div>
-                    </div>
-                    <div class="project-row-arrow">
-                        <span>View Project</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </div>
-                </a>
-
-                <!-- Project 2 -->
-                <a href="/projects/apex.html" class="project-row">
-                    <div class="project-row-number">02</div>
-                    <div class="project-row-content">
-                        <div class="project-row-header">
-                            <h3 class="project-row-title">Apex Consulting</h3>
-                            <span class="project-row-industry">Business Consulting / B2B</span>
-                        </div>
-                        <p class="project-row-description">
-                            A management consulting firm needed a digital presence that matched their expertise. We designed and developed a custom website focused on lead generation, with clear service messaging and integrated booking.
-                        </p>
-                        <div class="project-row-services">
-                            <span>Web Development</span>
-                            <span>SEO</span>
-                            <span>Lead Generation</span>
-                        </div>
-                    </div>
-                    <div class="project-row-arrow">
-                        <span>View Project</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </div>
-                </a>
-
-                <!-- Project 3 -->
-                <a href="/projects/neverbored.html" class="project-row">
-                    <div class="project-row-number">03</div>
-                    <div class="project-row-content">
-                        <div class="project-row-header">
-                            <h3 class="project-row-title">Neverbored</h3>
-                            <span class="project-row-industry">Fashion / Lifestyle Brand</span>
-                        </div>
-                        <p class="project-row-description">
-                            Full-service brand launch for a clothing company built around creativity and self-expression. From brand strategy and naming to e-commerce development and launch campaign—we brought the vision to life.
-                        </p>
-                        <div class="project-row-services">
-                            <span>Brand Strategy</span>
-                            <span>Visual Identity</span>
-                            <span>E-commerce</span>
-                            <span>Launch Campaign</span>
-                        </div>
-                    </div>
-                    <div class="project-row-arrow">
-                        <span>View Project</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section services-section">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-label">[ 002 ] WHAT WE DO</span>
-                <h2 class="section-title">FULL-SERVICE <span class="gradient-cyan">CAPABILITIES</span></h2>
-                <p class="section-description" style="margin-top: 1.5rem; max-width: 700px;">
-                    Our core team brings deep expertise in digital strategy and web development. For brand strategy and visual identity, we work alongside trusted creative partners we've known for years—so you get the best of both worlds.
-                </p>
-            </div>
-
-            <div class="services-grid-4">
-                <div class="service-card">
-                    <span class="service-number">01</span>
-                    <h3 class="service-title">Brand Strategy</h3>
-                    <p class="service-description">Define your position in the market with clarity that cuts through the noise.</p>
-                    <ul class="service-list">
-                        <li>→ Market positioning</li>
-                        <li>→ Audience research</li>
-                        <li>→ Messaging frameworks</li>
-                        <li>→ Competitive analysis</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <span class="service-number">02</span>
-                    <h3 class="service-title">Visual Identity</h3>
-                    <p class="service-description">Create a visual language that captures your brand's essence.</p>
-                    <ul class="service-list">
-                        <li>→ Logo design</li>
-                        <li>→ Color & typography</li>
-                        <li>→ Brand guidelines</li>
-                        <li>→ Collateral design</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <span class="service-number">03</span>
-                    <h3 class="service-title">Web Development</h3>
-                    <p class="service-description">Custom websites engineered for performance, built for conversion.</p>
-                    <ul class="service-list">
-                        <li>→ Custom design & dev</li>
-                        <li>→ Responsive architecture</li>
-                        <li>→ CMS integration</li>
-                        <li>→ Performance optimization</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <span class="service-number">04</span>
-                    <h3 class="service-title">Digital Growth</h3>
-                    <p class="service-description">Launch strategies and optimization to amplify your reach.</p>
-                    <ul class="service-list">
-                        <li>→ SEO & content strategy</li>
-                        <li>→ Analytics & tracking</li>
-                        <li>→ Social templates</li>
-                        <li>→ Launch campaigns</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Network Callout -->
-            <div class="network-callout">
-                <div class="network-content">
-                    <div class="network-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
-                        </svg>
-                    </div>
-                    <div class="network-text">
-                        <h4>Our Creative Family</h4>
-                        <p>Over the years, we've built relationships with talented specialists we trust completely—brand strategists, copywriters, photographers, and creative directors who share our values. When your project needs their expertise, they become part of our team. You still get one point of contact. We handle the coordination. You get the results.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Packages Section -->
-    <section id="packages" class="section packages-section">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-label">[ 003 ] ENGAGEMENT OPTIONS</span>
-                <h2 class="section-title">CHOOSE YOUR <span class="gradient-cyan">SIGNAL</span></h2>
-                <p class="section-description" style="margin-top: 1.5rem; max-width: 700px;">
-                    Three tiers designed to meet you where you are. Whether you need a digital presence or a complete brand transformation, we've got you covered.
-                </p>
-            </div>
-
-            <div class="packages-grid">
-                <!-- Package 1: Launch -->
-                <div class="package-card">
-                    <div class="package-header">
-                        <span class="package-label">DIGITAL FOUNDATION</span>
-                        <h3 class="package-name">LAUNCH</h3>
-                        <p class="package-tagline">For brands ready to establish their digital presence</p>
-                    </div>
-                    <div class="package-price">
-                        <span class="price-from">Starting at</span>
-                        <span class="price-amount">$5,000</span>
-                    </div>
-                    <div class="package-details">
-                        <p class="package-description">You have a brand—now you need a website that works. We build high-performance sites that convert visitors into clients.</p>
-                        <ul class="package-features">
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Custom website design (5-7 pages)</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Mobile-responsive development</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>CMS integration</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Contact & lead capture forms</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Basic SEO setup</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>30 days post-launch support</li>
-                        </ul>
-                        <div class="package-timeline"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg><span>3-4 week timeline</span></div>
-                    </div>
-                    <a href="#contact" class="btn btn-secondary btn-full">Get Started</a>
-                </div>
-
-                <!-- Package 2: Signal (Featured) -->
-                <div class="package-card package-featured">
-                    <div class="package-badge">MOST POPULAR</div>
-                    <div class="package-header">
-                        <span class="package-label">BRAND + DIGITAL</span>
-                        <h3 class="package-name">SIGNAL</h3>
-                        <p class="package-tagline">For brands ready to refine and elevate</p>
-                    </div>
-                    <div class="package-price">
-                        <span class="price-from">Starting at</span>
-                        <span class="price-amount">$12,000</span>
-                    </div>
-                    <div class="package-details">
-                        <p class="package-description">Your brand needs more than a refresh—it needs strategic clarity. We align your positioning, identity, and digital presence into one cohesive system.</p>
-                        <ul class="package-features">
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Brand strategy workshop</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Visual identity refresh</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Brand guidelines document</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Custom website (7-10 pages)</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Content strategy framework</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>SEO optimization</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>60 days post-launch support</li>
-                        </ul>
-                        <div class="package-timeline"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg><span>6-8 week timeline</span></div>
-                    </div>
-                    <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
-                </div>
-
-                <!-- Package 3: Amplify -->
-                <div class="package-card">
-                    <div class="package-header">
-                        <span class="package-label">COMPLETE TRANSFORMATION</span>
-                        <h3 class="package-name">AMPLIFY</h3>
-                        <p class="package-tagline">For brands ready to dominate their market</p>
-                    </div>
-                    <div class="package-price">
-                        <span class="price-from">Starting at</span>
-                        <span class="price-amount">$25,000</span>
-                    </div>
-                    <div class="package-details">
-                        <p class="package-description">The full transformation. Strategy, identity, digital, and launch—everything you need to enter the market with maximum impact.</p>
-                        <ul class="package-features">
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Comprehensive brand strategy</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Complete visual identity system</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Full brand guidelines & assets</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Custom website (10+ pages)</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Content strategy & copywriting</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Social media brand templates</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Launch campaign strategy</li>
-                            <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>90 days support + quarterly check-ins</li>
-                        </ul>
-                        <div class="package-timeline"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg><span>10-14 week timeline</span></div>
-                    </div>
-                    <a href="#contact" class="btn btn-secondary btn-full">Get Started</a>
-                </div>
-            </div>
-
-            <div class="packages-note">
-                <p>Need something custom? We also work on <strong>retainer arrangements</strong> and <strong>à la carte projects</strong>. <a href="#contact">Let's talk</a> about what you need.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="section process-section">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-label">[ 004 ] HOW WE WORK</span>
-                <h2 class="section-title">OUR <span class="gradient-cyan">PROCESS</span></h2>
-            </div>
-
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="process-number">01</div>
-                    <div class="process-content">
-                        <h4>Discovery</h4>
-                        <p>We dig deep into your business, audience, and competitive landscape. Every project starts with understanding.</p>
-                    </div>
-                </div>
-                <div class="process-connector"></div>
-                <div class="process-step">
-                    <div class="process-number">02</div>
-                    <div class="process-content">
-                        <h4>Strategy</h4>
-                        <p>We define your positioning, messaging, and creative direction. This blueprint guides everything else.</p>
-                    </div>
-                </div>
-                <div class="process-connector"></div>
-                <div class="process-step">
-                    <div class="process-number">03</div>
-                    <div class="process-content">
-                        <h4>Create</h4>
-                        <p>Design, develop, refine. We bring strategy to life with your feedback at every step.</p>
-                    </div>
-                </div>
-                <div class="process-connector"></div>
-                <div class="process-step">
-                    <div class="process-number">04</div>
-                    <div class="process-content">
-                        <h4>Launch</h4>
-                        <p>We deploy, optimize, and stick around to ensure everything performs and you're set for success.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About / Meet the Founder Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="founder-section">
-                <div class="founder-image">
-                    <!-- Replace src with your actual photo 
-                    <div class="founder-photo-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
-                        </svg>
-                        <span>Your photo here</span>
-                    </div> --> 
-                    <!-- Uncomment and add your photo: -->
-                    <img src="/images/chris-founder.jpg" alt="Chris - Founder of Signal Studios" class="founder-photo">
-                    <div class="founder-image-accent"></div>
-                </div>
-                
-                <div class="founder-content">
-                    <span class="section-label">[ 005 ] MEET THE FOUNDER</span>
-                    <h2 class="founder-greeting">
-                        Hi, I'm <span class="gradient-cyan">Chris</span>.
-                    </h2>
-                    <div class="founder-bio">
-                        <p>
-                            I started Signal Studios because I was tired of seeing talented businesses struggle with the same problem: they're great at what they do, but their brand doesn't show it. 
-                        </p>
-                        <p>
-                            Before this, I spent years in web development and saw how often companies got stuck between expensive agencies that didn't understand their business and DIY solutions that looked... well, DIY. There had to be a better way.
-                        </p>
-                        <p>
-                            So I built Signal Studios to be what I wish existed—a creative partner that actually listens, genuinely cares about results, and makes the whole process feel collaborative instead of transactional.
-                        </p>
-                        <p>
-                            I work with a small network of designers and strategists I trust completely. We keep things intentionally small so every client gets real attention, not just a seat on an assembly line.
-                        </p>
-                    </div>
-                    <div class="founder-values">
-                        <div class="value-item">
-                            <span class="value-icon">✦</span>
-                            <span>Honest feedback, always</span>
-                        </div>
-                        <div class="value-item">
-                            <span class="value-icon">✦</span>
-                            <span>Strategy before pixels</span>
-                        </div>
-                        <div class="value-item">
-                            <span class="value-icon">✦</span>
-                            <span>Partners, not vendors</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <span class="section-label">[ 006 ] LET'S CONNECT</span>
-                    <h2 class="section-title">
-                        LET'S BUILD<br>
-                        <span class="gradient-cyan">SOMETHING</span><br>
-                        TOGETHER
-                    </h2>
-                    <p class="contact-text">
-                        Every great partnership starts with a simple conversation. We'd love to hear about your business, understand your challenges, and explore how we might help. No pressure, no jargon—just a genuine chat about where you want to go.
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="contact-label">EMAIL</span>
-                            <a href="mailto:hello@signalstudios.com" class="contact-value">hello@signalstudios.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">LOCATION</span>
-                            <span class="contact-value">Los Angeles, CA</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">SOCIAL</span>
-                            <div class="social-links">
-                                <a href="#">Instagram</a>
-                                <a href="#">LinkedIn</a>
-                                <a href="#">Twitter</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-container">
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>NAME</label>
-                                <input type="text" name="name" required placeholder="Your name">
-                            </div>
-                            <div class="form-group">
-                                <label>EMAIL</label>
-                                <input type="email" name="email" required placeholder="your@email.com">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>COMPANY</label>
-                                <input type="text" name="company" placeholder="Your company">
-                            </div>
-                            <div class="form-group">
-                                <label>INTERESTED IN</label>
-                                <select name="package" required>
-                                    <option value="" disabled selected>Select a package</option>
-                                    <option value="launch">Launch ($5k+)</option>
-                                    <option value="signal">Signal ($12k+)</option>
-                                    <option value="amplify">Amplify ($25k+)</option>
-                                    <option value="custom">Custom / Not Sure</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>TELL US ABOUT YOUR PROJECT</label>
-                            <textarea name="message" rows="4" required placeholder="What are you looking to achieve?"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">SEND MESSAGE →</button>
-                        <p class="form-status" id="formStatus"></p>
-                    </form>
-                </div>
-            </div>
+            <h2 class="cta-title">Ready to transform your brand?</h2>
+            <p class="cta-description">Let's discuss how we can help your business connect with the right audience.</p>
+            <a href="/#contact" class="btn btn-primary">START A PROJECT</a>
         </div>
     </section>
 
@@ -705,18 +960,18 @@
                 <div class="footer-nav">
                     <div class="footer-nav-column">
                         <h4>Navigation</h4>
-                        <a href="#work">Work</a>
-                        <a href="#services">Services</a>
-                        <a href="#packages">Packages</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
+                        <a href="/#work">Work</a>
+                        <a href="/#services">Services</a>
+                        <a href="/#packages">Packages</a>
+                        <a href="/#about">About</a>
+                        <a href="/#contact">Contact</a>
                     </div>
                     <div class="footer-nav-column">
                         <h4>Services</h4>
-                        <a href="#services">Brand Strategy</a>
-                        <a href="#services">Visual Identity</a>
-                        <a href="#services">Web Development</a>
-                        <a href="#services">Digital Growth</a>
+                        <a href="/#services">Brand Strategy</a>
+                        <a href="/#services">Visual Identity</a>
+                        <a href="/#services">Web Development</a>
+                        <a href="/#services">Digital Growth</a>
                     </div>
                     <div class="footer-nav-column">
                         <h4>Contact</h4>
