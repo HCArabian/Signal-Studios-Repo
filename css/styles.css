@@ -1784,7 +1784,35 @@ a.contact-value:hover {
 @media (max-width: 1920px) {
     .packages-grid {
         grid-template-columns: 1fr;
-        max-width: 500px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .package-card.package-featured {
+        transform: none;
+    }
+    .package-card.package-featured:hover {
+        transform: translateY(-8px);
+    }
+    .services-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .process-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .process-step {
+        flex: 0 0 45%;
+        margin-bottom: 2rem;
+    }
+    .process-connector {
+        display: none;
+    }
+}
+@media (max-width: 1440px) {
+    .packages-grid {
+        grid-template-columns: 1fr;
+        max-width: 740px;
         margin-left: auto;
         margin-right: auto;
     }
